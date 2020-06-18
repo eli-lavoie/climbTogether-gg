@@ -1,0 +1,196 @@
+{
+  "users": [
+    {
+      "username": "admin",
+      "password": "hunter2",
+      "leagueId": "",
+      "verified": false,
+      "rep": 0,
+      "rank": 28,
+      "id": 1
+    },
+    {
+      "username": "admin2",
+      "password": "hunter2",
+      "leagueId": "",
+      "verified": false,
+      "rep": 0,
+      "rank": 28,
+      "id": 2
+    },
+    {
+      "username": "admin3",
+      "password": "hunter4",
+      "leagueId": "",
+      "verified": false,
+      "rep": 0,
+      "rank": 28,
+      "id": 3
+    }
+  ],
+  "ranks": [
+    {
+      "id": 1,
+      "tier": "Iron",
+      "Division": "IV"
+    },
+    {
+      "id": 2,
+      "tier": "Iron",
+      "Division": "III"
+    },
+    {
+      "id": 3,
+      "tier": "Iron",
+      "Division": "II"
+    },
+    {
+      "id": 4,
+      "tier": "Iron",
+      "Division": "II"
+    },
+    {
+      "id": 5,
+      "tier": "Bronze",
+      "Division": "IV"
+    },
+    {
+      "id": 6,
+      "tier": "Bronze",
+      "Division": "III"
+    },
+    {
+      "id": 7,
+      "tier": "Bronze",
+      "Division": "II"
+    },
+    {
+      "id": 8,
+      "tier": "Bronze",
+      "Division": "I"
+    },
+    {
+      "id": 9,
+      "tier": "Silver",
+      "Division": "IV"
+    },
+    {
+      "id": 10,
+      "tier": "Silver",
+      "Division": "III"
+    },
+    {
+      "id": 11,
+      "tier": "Silver",
+      "Division": "II"
+    },
+    {
+      "id": 12,
+      "tier": "Silver",
+      "Division": "I"
+    },
+    {
+      "id": 13,
+      "tier": "Gold",
+      "Division": "IV"
+    },
+    {
+      "id": 14,
+      "tier": "Gold",
+      "Division": "III"
+    },
+    {
+      "id": 15,
+      "tier": "Gold",
+      "Division": "II"
+    },
+    {
+      "id": 16,
+      "tier": "Gold",
+      "Division": "I"
+    },
+    {
+      "id": 17,
+      "tier": "Platinum",
+      "Division": "IV"
+    },
+    {
+      "id": 18,
+      "tier": "Platinum",
+      "Division": "III"
+    },
+    {
+      "id": 19,
+      "tier": "Platinum",
+      "Division": "II"
+    },
+    {
+      "id": 20,
+      "tier": "Platinum",
+      "Division": "I"
+    },
+    {
+      "id": 21,
+      "tier": "Diamond",
+      "Division": "IV"
+    },
+    {
+      "id": 22,
+      "tier": "Diamond",
+      "Division": "III"
+    },
+    {
+      "id": 23,
+      "tier": "Diamond",
+      "Division": "II"
+    },
+    {
+      "id": 24,
+      "tier": "Diamond",
+      "Division": "I"
+    },
+    {
+      "id": 25,
+      "tier": "Master",
+      "Division": ""
+    },
+    {
+      "id": 26,
+      "tier": "Grandmaster",
+      "Division": ""
+    },
+    {
+      "id": 27,
+      "tier": "Challenger",
+      "Division": ""
+    },
+    {
+      "id": 28,
+      "tier": "Unranked",
+      "Division": ""
+    }
+  ],
+  "gametypes": [
+    {
+      "id": 1,
+      "type": "Normal"
+    },
+    {
+      "id": 2,
+      "type": "Ranked (Solo/Duo)"
+    },
+    {
+      "id": 3,
+      "type": "Ranked (Flex)"
+    },
+    {
+      "id": 4,
+      "type": "ARAM"
+    },
+    {
+      "id": 5,
+      "type": "Rotating Game Mode (RGM)"
+    }
+  ],
+  "LFGPosts": []
+}

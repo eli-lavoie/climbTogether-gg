@@ -1,0 +1,37 @@
+.main-container{
+  background-color: #e6e6e6;
+  margin-top: 50px
+}
+
+.main-jumbo{
+  background-color: #39393a
+}
+.div-line{
+  border-top: 2px solid #e6e6e6
+}
+
+.login-register{
+  display: flex;
+  justify-content: space-around
+}
+.or{
+  text-align: center
+}
+.temp{
+  border: 2px solid black
+}
+
+.login-col{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.or-col{
+  display: flex;
+  justify-content: center;
+}
+
+.register-col{
+  display: flex;
+  justify-content: flex-start;
+}
