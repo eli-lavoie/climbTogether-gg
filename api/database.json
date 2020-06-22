@@ -26,148 +26,193 @@
       "rep": 0,
       "rank": 28,
       "id": 3
+    },
+    {
+      "username": "yungbraum",
+      "password": "peepopoggers",
+      "leagueId": "Braums Mom",
+      "verified": true,
+      "rep": 0,
+      "rank": 11,
+      "id": 4
+    },
+    {
+      "username": "DrLifehaax",
+      "password": "platsmurfmain",
+      "leagueId": "Dr Lifehaax",
+      "verified": true,
+      "rep": 0,
+      "rank": 28,
+      "id": 5
+    },
+    {
+      "username": "xminhx",
+      "password": "iloveosu",
+      "leagueId": "xminhx",
+      "verified": true,
+      "rep": 0,
+      "rank": 28,
+      "id": 6
+    },
+    {
+      "username": "techsupper",
+      "password": "twomadisfunny",
+      "leagueId": "TechSupper",
+      "verified": true,
+      "rep": 0,
+      "rank": 28,
+      "id": 7
+    },
+    {
+      "username": "robaight",
+      "password": "crackcrack23",
+      "leagueId": "C9 ZVENNN",
+      "verified": true,
+      "rep": 0,
+      "rank": 27,
+      "id": 8
     }
   ],
   "ranks": [
     {
       "id": 1,
-      "tier": "Iron",
-      "Division": "IV"
+      "tier": "IRON",
+      "division": "IV"
     },
     {
       "id": 2,
-      "tier": "Iron",
-      "Division": "III"
+      "tier": "IRON",
+      "division": "III"
     },
     {
       "id": 3,
-      "tier": "Iron",
-      "Division": "II"
+      "tier": "IRON",
+      "division": "II"
     },
     {
       "id": 4,
-      "tier": "Iron",
-      "Division": "II"
+      "tier": "IRON",
+      "division": "II"
     },
     {
       "id": 5,
-      "tier": "Bronze",
-      "Division": "IV"
+      "tier": "BRONZE",
+      "division": "IV"
     },
     {
       "id": 6,
-      "tier": "Bronze",
-      "Division": "III"
+      "tier": "BRONZE",
+      "division": "III"
     },
     {
       "id": 7,
-      "tier": "Bronze",
-      "Division": "II"
+      "tier": "BRONZE",
+      "division": "II"
     },
     {
       "id": 8,
-      "tier": "Bronze",
-      "Division": "I"
+      "tier": "BRONZE",
+      "division": "I"
     },
     {
       "id": 9,
-      "tier": "Silver",
-      "Division": "IV"
+      "tier": "SILVER",
+      "division": "IV"
     },
     {
       "id": 10,
-      "tier": "Silver",
-      "Division": "III"
+      "tier": "SILVER",
+      "division": "III"
     },
     {
       "id": 11,
-      "tier": "Silver",
-      "Division": "II"
+      "tier": "SILVER",
+      "division": "II"
     },
     {
       "id": 12,
-      "tier": "Silver",
-      "Division": "I"
+      "tier": "SILVER",
+      "division": "I"
     },
     {
       "id": 13,
-      "tier": "Gold",
-      "Division": "IV"
+      "tier": "GOLD",
+      "division": "IV"
     },
     {
       "id": 14,
-      "tier": "Gold",
-      "Division": "III"
+      "tier": "GOLD",
+      "division": "III"
     },
     {
       "id": 15,
-      "tier": "Gold",
-      "Division": "II"
+      "tier": "GOLD",
+      "division": "II"
     },
     {
       "id": 16,
-      "tier": "Gold",
-      "Division": "I"
+      "tier": "GOLD",
+      "division": "I"
     },
     {
       "id": 17,
-      "tier": "Platinum",
-      "Division": "IV"
+      "tier": "PLATINUM",
+      "division": "IV"
     },
     {
       "id": 18,
-      "tier": "Platinum",
-      "Division": "III"
+      "tier": "PLATINUM",
+      "division": "III"
     },
     {
       "id": 19,
-      "tier": "Platinum",
-      "Division": "II"
+      "tier": "PLATINUM",
+      "division": "II"
     },
     {
       "id": 20,
-      "tier": "Platinum",
-      "Division": "I"
+      "tier": "PLATINUM",
+      "division": "I"
     },
     {
       "id": 21,
-      "tier": "Diamond",
-      "Division": "IV"
+      "tier": "DIAMOND",
+      "division": "IV"
     },
     {
       "id": 22,
-      "tier": "Diamond",
-      "Division": "III"
+      "tier": "DIAMOND",
+      "division": "III"
     },
     {
       "id": 23,
-      "tier": "Diamond",
-      "Division": "II"
+      "tier": "DIAMOND",
+      "division": "II"
     },
     {
       "id": 24,
-      "tier": "Diamond",
-      "Division": "I"
+      "tier": "DIAMOND",
+      "division": "I"
     },
     {
       "id": 25,
-      "tier": "Master",
-      "Division": ""
+      "tier": "MASTER",
+      "division": "I"
     },
     {
       "id": 26,
-      "tier": "Grandmaster",
-      "Division": ""
+      "tier": "GRANDMASTER",
+      "division": "I"
     },
     {
       "id": 27,
-      "tier": "Challenger",
-      "Division": ""
+      "tier": "CHALLENGER",
+      "division": "I"
     },
     {
       "id": 28,
       "tier": "Unranked",
-      "Division": ""
+      "division": ""
     }
   ],
   "gametypes": [

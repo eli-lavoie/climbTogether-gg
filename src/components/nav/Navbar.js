@@ -13,6 +13,7 @@ import {
   DropdownItem,
   NavbarText
 } from 'reactstrap';
+import './Navbar.css'
 
 const NavbarHeader = props => {
   const logout = () => {
@@ -26,7 +27,7 @@ const NavbarHeader = props => {
 
   return (
     <div>
-      <Navbar color="#e6e6e6" expand="lg" >
+      <Navbar  expand="lg" className="navbar">
         <NavbarBrand>
         <svg
               width={50}

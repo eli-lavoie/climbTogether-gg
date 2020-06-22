@@ -29,5 +29,8 @@ export default {
       },
       body: JSON.stringify(updatedData)
     }).then(data => data.json)
+  },
+  getRank(tier, division) {
+    return fetch(`${remoteURL}/ranks?tier=${tier}&division=${division}`).then(result => result.json())
   }
 }

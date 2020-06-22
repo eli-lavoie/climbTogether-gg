@@ -3,10 +3,12 @@ import { Route, Redirect } from 'react-router-dom'
 import Home from './components/home/Home'
 import Login from './components/auth/Login'
 import Register from './components/auth/Register'
+import Verify from './components/auth/Verify'
 
 
 function ApplicationView() {
   const isAuthenticated = sessionStorage.getItem("authenticated")
+  const isVerified = sessionStorage.getItem("verified")
   
   return (
     <>
@@ -23,6 +25,21 @@ function ApplicationView() {
       <Route exact path ="/register"
       render={props =>{
         return <Register {...props}/>
+      }}/>
+
+      <Route exact path ="/verify"
+      render={props =>{
+        if(isAuthenticated === "true"){
+          if(isVerified === "false"){
+          return <Verify {...props} />
+          }
+          else{
+            return <Redirect to="/" {...props} />
+          }
+        }
+        else{
+          return <Redirect to="/"/>
+        }
       }}/>
     </>
   );
