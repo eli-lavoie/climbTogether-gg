@@ -27,6 +27,7 @@ const Login = props => {
         if (userLogin.password === password){
           sessionStorage.setItem("userId", userLogin.id)
           sessionStorage.setItem("authenticated", true)
+          sessionStorage.setItem("verified", userLogin.verified)
           props.history.push("/")
           window.location.reload()
         }

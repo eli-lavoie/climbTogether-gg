@@ -35,3 +35,27 @@
   display: flex;
   justify-content: flex-start;
 }
+
+.login-button{
+  background-color: #19297C;
+  color: #e6e6e6;
+  border: none
+}
+
+.register-button{
+  background-color: #0496FF;
+  color: #e6e6e6;
+  border: 0px
+}
+
+.login-button:hover{
+  background-color: #e6e6e6;
+  color: #19297c;
+  border: 1px solid  #0496FF
+}
+
+.register-button:hover{
+  background-color: #e6e6e6;
+  color: #0496FF;
+  border: 1px solid #19297c 
+}

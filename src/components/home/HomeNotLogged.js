@@ -16,7 +16,7 @@ const HomeNotLogged = props => {
           <Container>
             <Row className="login-register">
               <Col sm="5" className="login-col">
-                <Button color="info" onClick={() => {onClickBtn("/login")}}>
+                <Button className="login-button" onClick={() => {onClickBtn("/login")}}>
                   Login
                 </Button>
               </Col>
@@ -24,7 +24,7 @@ const HomeNotLogged = props => {
                 <h2>or</h2>
               </Col>
               <Col sm="5" className="register-col">
-                <Button color="info" onClick={() => {onClickBtn("/register")}}>
+                <Button className="register-button" onClick={() => {onClickBtn("/register")}}>
                   Register
                 </Button>
               </Col>
