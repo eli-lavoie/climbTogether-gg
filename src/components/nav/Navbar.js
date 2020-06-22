@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import {
   Collapse,
   Navbar,
@@ -15,7 +15,14 @@ import {
 } from 'reactstrap';
 import './Navbar.css'
 
-const NavbarHeader = props => {
+const NavbarHeader = () => {
+  const [userListings, setUserListings] = useState("")
+  
+  const getUser = () => {
+    const user = sessionStorage.getItem("userId")
+    const userListLink = "/listings/" + user
+    setUserListings(userListLink)
+  }
   const logout = () => {
     sessionStorage.removeItem("authenticated")
     sessionStorage.removeItem("userId")
@@ -25,23 +32,13 @@ const NavbarHeader = props => {
   const [isOpen, setIsOpen] = useState(false)
   const toggle = () => setIsOpen(!isOpen)
 
+  useEffect(() => {
+    getUser()
+  }, [])
+
   return (
     <div>
       <Navbar  expand="lg" className="navbar">
-        <NavbarBrand>
-        <svg
-              width={50}
-              height={50}
-              xmlns="http://www.w3.org/2000/svg"
-              xmlnsXlink ="http://www.w3.org/1999/xlink"
-            >       
-              <image
-                xlinkHref="https://i.ibb.co/6gn3mmJ/reactshell.png"
-                height={50}
-                width={50}
-              />
-            </svg>
-        </NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
@@ -51,20 +48,41 @@ const NavbarHeader = props => {
               </NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="/messages">
-                Messages
+              <NavLink href="/listings">
+                Listings
               </NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="/articles">
-                News
+              <NavLink href="/responses">
+                Responses
               </NavLink>
             </NavItem>
-            <NavItem>
-              <NavLink href="/tasks">
-                Tasks
-              </NavLink>
-            </NavItem>
+          <UncontrolledDropdown nav inNavbar>
+              <DropdownToggle nav caret>
+                More
+              </DropdownToggle>
+              <DropdownMenu right>
+                <DropdownItem>
+                  <NavLink href="/profile">
+                    Your Profile
+                  </NavLink>
+                </DropdownItem>
+                <DropdownItem>
+                  <NavLink href="/profile/settings">
+                    Settings
+                  </NavLink>
+                </DropdownItem>
+                <DropdownItem>
+                  <NavLink href="/listings/created">
+                    Your Listings
+                  </NavLink>
+                </DropdownItem>
+                <DropdownItem divider />
+                <DropdownItem>
+                  Logout
+                </DropdownItem>
+              </DropdownMenu>
+            </UncontrolledDropdown>
           </Nav>
         </Collapse>
       </Navbar>
