@@ -78,7 +78,7 @@ const NavbarHeader = () => {
                   </NavLink>
                 </DropdownItem>
                 <DropdownItem divider />
-                <DropdownItem>
+                <DropdownItem onClick={(() => logout())}>
                   Logout
                 </DropdownItem>
               </DropdownMenu>

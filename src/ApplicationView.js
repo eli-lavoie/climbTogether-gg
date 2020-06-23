@@ -4,6 +4,7 @@ import Home from './components/home/Home'
 import Login from './components/auth/Login'
 import Register from './components/auth/Register'
 import Verify from './components/auth/Verify'
+import CreateListing from './components/listings/CreateListing'
 
 
 function ApplicationView() {
@@ -35,6 +36,20 @@ function ApplicationView() {
           }
           else{
             return <Redirect to="/" {...props} />
+          }
+        }
+        else{
+          return <Redirect to="/"/>
+        }
+      }}/>
+      <Route exact path ="/listings/create"
+      render={props =>{
+        if(isAuthenticated === "true"){
+          if(isVerified === "false"){
+            return <Verify {...props} />
+          }
+          else{
+            return <CreateListing {...props}/>
           }
         }
         else{
