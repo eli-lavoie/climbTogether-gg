@@ -5,6 +5,7 @@
 /.pnp
 .pnp.js
 
+
 # testing
 /coverage
 
@@ -23,6 +24,5 @@ yarn-debug.log*
 yarn-error.log*
 
 #local and global database
-/api 
-riotapikey.js
 database.json
+riotapikey.js
