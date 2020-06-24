@@ -32,5 +32,11 @@ export default {
   },
   getRank(tier, division) {
     return fetch(`${remoteURL}/ranks?tier=${tier}&division=${division}`).then(result => result.json())
+  },
+  getRoleByName(role) {
+    return fetch(`${remoteURL}/roles?name=${role}`).then(result => result.json())
+  },
+  getModeByName(mode) {
+    return fetch(`${remoteURL}/gametypes?type=${mode}`).then(result => result.json())
   }
 }
