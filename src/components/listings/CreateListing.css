@@ -1,0 +1,14 @@
+.post-require-honored{
+  display: flex;
+  align-items: center
+}
+
+.req-honor-text{
+  margin: 1.89px
+}
+
+.submit-button{
+  background-color: #0496FF;
+  color: #e6e6e6;
+  border: none;
+}

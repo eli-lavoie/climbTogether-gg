@@ -5,6 +5,7 @@ import Login from './components/auth/Login'
 import Register from './components/auth/Register'
 import Verify from './components/auth/Verify'
 import CreateListing from './components/listings/CreateListing'
+import AllCards from './components/listings/AllCards'
 
 
 function ApplicationView() {
@@ -42,11 +43,27 @@ function ApplicationView() {
           return <Redirect to="/"/>
         }
       }}/>
+
+      <Route exact path ="/listings"
+      render={props => {
+        if(isAuthenticated === 'true'){
+          if(isVerified === "false"){
+            return <Redirect to="/verify"/>
+          }
+          else{
+            return <AllCards {...props} />
+          }
+        }
+        else{
+          return <Redirect to="/"/>
+        }
+      }}/>
+
       <Route exact path ="/listings/create"
       render={props =>{
         if(isAuthenticated === "true"){
           if(isVerified === "false"){
-            return <Verify {...props} />
+            return <Redirect to="/verify"/>
           }
           else{
             return <CreateListing {...props}/>

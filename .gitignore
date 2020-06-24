@@ -25,3 +25,4 @@ yarn-error.log*
 #local and global database
 /api 
 riotapikey.js
+database.json

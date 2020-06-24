@@ -211,8 +211,8 @@
     },
     {
       "id": 28,
-      "tier": "Unranked",
-      "division": ""
+      "tier": "UNRANKED",
+      "division": "I"
     }
   ],
   "gametypes": [
@@ -222,11 +222,11 @@
     },
     {
       "id": 2,
-      "type": "Ranked (Solo/Duo)"
+      "type": "Ranked(Solo/Duo)"
     },
     {
       "id": 3,
-      "type": "Ranked (Flex)"
+      "type": "Ranked(Flex)"
     },
     {
       "id": 4,
@@ -234,8 +234,84 @@
     },
     {
       "id": 5,
-      "type": "Rotating Game Mode (RGM)"
+      "type": "RGM"
     }
   ],
-  "LFGPosts": []
+  "LFGPosts": [
+    {
+      "userId": "4",
+      "title": "Test Post Pls Ignore",
+      "gameType": 4,
+      "reqRankMin": 24,
+      "reqRankMax": 27,
+      "reqRole": 6,
+      "reqHonored": false,
+      "time": 1596969420000,
+      "discord": "no",
+      "id": 1
+    },
+    {
+      "userId": "4",
+      "title": "Cream Weam",
+      "gameType": 1,
+      "reqRankMin": 28,
+      "reqRankMax": 27,
+      "reqRole": 6,
+      "reqHonored": false,
+      "time": 1595451060000,
+      "discord": 0,
+      "id": 2
+    },
+    {
+      "userId": "4",
+      "title": "Test Post Please Ignore!",
+      "gameType": 5,
+      "reqRankMin": 27,
+      "reqRankMax": 27,
+      "reqRole": 6,
+      "reqHonored": false,
+      "time": 1593215700000,
+      "discord": 0,
+      "id": 3
+    },
+    {
+      "userId": "4",
+      "title": "LF GOOD JUNGLE WHO GANKS",
+      "gameType": 2,
+      "reqRankMin": 10,
+      "reqRankMax": 15,
+      "reqRole": 2,
+      "reqHonored": false,
+      "time": 1593306000000,
+      "discord": 0,
+      "id": 4
+    }
+  ],
+  "roles": [
+    {
+      "id": 1,
+      "name": "Top"
+    },
+    {
+      "id": 2,
+      "name": "Jungle"
+    },
+    {
+      "id": 3,
+      "name": "Middle"
+    },
+    {
+      "id": 4,
+      "name": "ADC"
+    },
+    {
+      "id": 5,
+      "name": "Support"
+    },
+    {
+      "id": 6,
+      "name": "Fill"
+    }
+  ],
+  "responses": []
 }
