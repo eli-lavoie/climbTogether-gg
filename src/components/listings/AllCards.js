@@ -9,7 +9,9 @@ const AllCards = props => {
 
   const allListings = () => {
     LocalDataManager.getAll("LFGPosts")
-    .then(LFGPosts => {setPosts(LFGPosts)})
+    .then(LFGPosts => {
+      setPosts(LFGPosts)
+    })
   }
 
   const test = () => console.log(posts)

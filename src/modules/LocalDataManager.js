@@ -38,5 +38,8 @@ export default {
   },
   getModeByName(mode) {
     return fetch(`${remoteURL}/gametypes?type=${mode}`).then(result => result.json())
+  },
+  getResponsesByPostId(id) {
+    return fetch(`${remoteURL}/responses?postId=${id}`).then(result => result.json())
   }
 }

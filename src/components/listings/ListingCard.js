@@ -19,6 +19,7 @@ const ListingCard = props => {
         setPostUser(postUsername)
       })
   }
+
   const getMinRank = () => {
     const minRankId = props.data.reqRankMin
     LocalDataManager.get("ranks", minRankId)
@@ -91,7 +92,7 @@ const ListingCard = props => {
           <CardText>{minRankName} - {maxRankName}</CardText>
           <CardText>{roleName}</CardText>
           <div className="details-div">
-          <Button onClick={() => getDetails()} >Details</Button>
+          <Button onClick={() => getDetails()}>Details</Button>
           </div>
         </CardBody>
       </Card>
