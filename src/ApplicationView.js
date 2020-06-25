@@ -6,6 +6,8 @@ import Register from './components/auth/Register'
 import Verify from './components/auth/Verify'
 import CreateListing from './components/listings/CreateListing'
 import AllCards from './components/listings/AllCards'
+import ListingDetail from './components/listings/ListingDetail'
+import DetailsEdit from './components/listings/DetailsEdit'
 
 
 function ApplicationView() {
@@ -59,7 +61,7 @@ function ApplicationView() {
         }
       }}/>
 
-      <Route exact path ="/listings/create"
+      <Route path ="/listings/create"
       render={props =>{
         if(isAuthenticated === "true"){
           if(isVerified === "false"){
@@ -73,7 +75,11 @@ function ApplicationView() {
           return <Redirect to="/"/>
         }
       }}/>
-    </>
+      <Route exact path="/listings/:postId(\d)" render={(props) =>{
+      return <ListingDetail postId={parseInt(props.match.params.postId)}/>
+      }}/>
+
+      </>
   );
 }
 
