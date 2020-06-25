@@ -1,0 +1,10 @@
+.post-card{
+  max-width: 20%;
+  margin: 5px;
+  flex-basis: 21%;
+}
+
+.details-div{
+  display: flex;
+  justify-content: center;
+}
