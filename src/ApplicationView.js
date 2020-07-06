@@ -79,6 +79,10 @@ function ApplicationView() {
       return <ListingDetail postId={parseInt(props.match.params.postId)}/>
       }}/>
 
+      <Route exact path="/listings/:postId(\d)/edit" render={(props) =>{
+      return <DetailsEdit postId={parseInt(props.match.params.postId)}/>
+      }}/>
+
       </>
   );
 }

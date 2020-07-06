@@ -12,16 +12,18 @@ const ResponsesList = props => {
   const [appStatus, setAppStatus] = useState("Undecided")
 
   const checkStatus = () => {
-    if(appStatus === "accepted"){
+    if(props.data.accepted === null){
+      setColor("warning")
+    }
+    else if(props.data.accepted === true){
       setColor("success")
     }
-    else if(appStatus === "rejected"){
+    else if (props.data.accepted === false){
       setColor("danger")
     }
-    else{
       return
     }
-  }
+  
 
   const getSummonerId = () => {
     LocalDataManager.get("users", appUserId)
@@ -54,6 +56,18 @@ const ResponsesList = props => {
     })
   }
 
+  const acceptBtn = () => {
+    const newResponse = {"postId": props.data.postId, "playerId": props.data.playerId, "accepted": true, "id": props.data.id}
+    LocalDataManager.update("responses", newResponse, props.data.id)
+    setAppStatus("accepted")
+  }
+
+  const rejectBtn = () => {
+    const newResponse = {"postId": props.data.postId, "playerId": props.data.playerId, "accepted": false, "id": props.data.id}
+    LocalDataManager.update("responses", newResponse, props.data.id)
+    setAppStatus("rejected")
+  }
+
   const genListInfo = () => {
     const summName = appName
     const summRank = appRank
@@ -66,6 +80,7 @@ const ResponsesList = props => {
   useEffect(() => {
     getSummonerId()
     getRankId()
+    checkStatus()
   }, [])
 
   useEffect(() => {
@@ -76,16 +91,17 @@ const ResponsesList = props => {
     genListInfo()
   }, [appRank])
 
-  useEffect(() => {
+  useEffect(() =>{
     checkStatus()
   }, [appStatus])
+
 
   return(
     <>
       <ListGroupItem color={listItemColor}>
         {listItemText}
-        <Button onClick={() => setAppStatus("accepted")}>Accept</Button>
-        <Button onClick={() => setAppStatus("rejected")}>Reject</Button>
+        <Button onClick={() => acceptBtn()}>Accept</Button>
+        <Button onClick={() => rejectBtn()}>Reject</Button>
       </ListGroupItem>
     </>
   )

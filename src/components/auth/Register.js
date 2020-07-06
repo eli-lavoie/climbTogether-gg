@@ -37,7 +37,7 @@ const Register = props => {
     }
     LocalDataManager.getAll("users")
       .then(existingUsers => {
-        let userExists = existingUsers.find(user => user.userName === user)
+        let userExists = existingUsers.find(user => user.username === user)
         if(userExists){
           setColor("danger")
           setError("That username is already in use.")
@@ -47,7 +47,8 @@ const Register = props => {
         LocalDataManager.post("users", createdUser)
         setColor("success")
         setError("Account created successfully! Please log in.")
-        setTimeout(props.history.push("/login"), 3000)
+        sessionStorage.setItem("authenticated", true)
+        props.history.push("/")
       })
   }  
 

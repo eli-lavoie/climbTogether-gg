@@ -159,13 +159,12 @@ const ListDetailsUser = props => {
       </Modal>
       <Container>
         <div className="title-and-creator">
-          <h1>{post.title}</h1>
+          <h1>{post.title} - {timeAsString}</h1>
           <h2>{postCreator}</h2>
         </div>
         <hr/>
         <div className="post-details">
-          <h3>{timeAsString}</h3>
-          <hr/>
+
           <h4>Minimum Rank: {minRankName}</h4>
           <h4>Maximum Rank: {maxRankName}</h4>
           <h4>Role(s) Available: {roleName}</h4>
