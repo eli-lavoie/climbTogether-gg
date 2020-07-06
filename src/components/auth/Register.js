@@ -48,7 +48,13 @@ const Register = props => {
         setColor("success")
         setError("Account created successfully! Please log in.")
         sessionStorage.setItem("authenticated", true)
+        LocalDataManager.getQueryByOneParam("users", "username", username)
+        .then(result => {
+          const newUserId = result[0].id
+          sessionStorage.setItem("userId", newUserId)
+        })
         props.history.push("/")
+        window.location.reload()
       })
   }  
 
