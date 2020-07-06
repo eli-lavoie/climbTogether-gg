@@ -41,5 +41,8 @@ export default {
   },
   getResponsesByPostId(id) {
     return fetch(`${remoteURL}/responses?postId=${id}`).then(result => result.json())
+  },
+  getQueryByOneParam(query, param, value){
+    return fetch(`${remoteURL}/${query}?${param}=${value}`).then(result => result.json())
   }
 }

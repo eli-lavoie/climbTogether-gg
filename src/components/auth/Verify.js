@@ -123,13 +123,16 @@ const Verify = props => {
       </Alert>
       <Container>
         <h1>Verify your League of Legends account.</h1>
+        <h3>Enter your League of Legends Summoner Name</h3>
         <Input disabled={!hidden} onChange={event => setSN(event.target.value)}/>
         <Button hidden={!hidden} onClick={checkAccount}>Submit</Button>
+        <h3 hidden={hidden}>Please change your League of Legends icon to the image below.</h3>
         <Media>
           <Media left href="#">
             <Media hidden={hidden} object src={imgLink} alt="Generic placeholder image" />
           </Media>
         </Media>
+        <h4 hidden={hidden}>Click the verify button after your icon has been changed.</h4>
         <Button hidden={hidden} onClick={verification}>Verify</Button>
       </Container>
     </>

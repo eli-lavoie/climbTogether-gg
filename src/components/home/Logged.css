@@ -1,0 +1,27 @@
+.greeting{
+  display: flex;
+  justify-content: center
+}
+
+.top-row{
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+
+
+.post-cards{
+  display:flex;
+  justify-content: center;
+}
+
+.posts-header{
+  display: flex;
+  justify-content: center;
+}
+
+.responses-header{
+  display: flex;
+  justify-content: center;
+}
