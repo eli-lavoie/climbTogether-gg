@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import LocalDataManager from '../../modules/LocalDataManager'
-import {Alert, Button, InputGroup, InputGroupText, InputGroupAddon, Input, Container, Card, CardBody, CardImg} from 'reactstrap'
+import {Alert, Button, InputGroup, InputGroupText, InputGroupAddon, Input, Container, Card, CardBody, CardImg, CardFooter} from 'reactstrap'
 import './Login.css'
 
 const Login = props => {
@@ -63,15 +63,17 @@ const Login = props => {
               </InputGroupAddon>
               <Input type="password" className="password-input" onChange={event => {setPassword(event.target.value)}}/>
             </InputGroup>
+          </CardBody>
+          <CardFooter>
             <div className="login-or-register">
-              <div className="login-btn">
-                <Button onClick={login}>Log In</Button>
+              <div>
+                <Button className="login-btn" onClick={login}>Log In</Button>
               </div>
-              <div className="register-btn">
-                <Button onClick={()  => {props.history.push("/register")}}>Register</Button>
+              <div>
+                <Button className="btn-to-register" onClick={()  => {props.history.push("/register")}}>Register</Button>
               </div>
             </div>
-          </CardBody>
+          </CardFooter>
         </Card>
       </Container>
     </>
