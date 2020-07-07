@@ -1,68 +1,30 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# NSS Front End Capstone: ClimbTogether
 
-## Available Scripts
+### Description:
+> ClimbTogether is a website designed to help you find a duo partner in League of Legends. It features Looking For Game (LFG) post creation, in which users are able to specify the details of their LFG Post such as 
+> > - Minimum and Maximum Rank
+> > - Date and Time
+> > - Specified role their teammate will play
+> > - Optional Discord link to allow for players to communicate through voice comms.
 
-In the project directory, you can run:
 
-### `npm start`
+### Technologies Used:
+> - HTML, CSS, JavaScript, [React](https://reactjs.org/)
+> - [reactstrap](http://reactstrap.github.io)
+> - [Riot Games API](https://developer.riotgames.com/)
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+### Usage:
+> To run ClimbTogether, you must complete the following steps.
+>  1. Clone the ClimbTogether respository down.
+>  2. Inside the main directory, create a folder titled `api`, and inside `api` create a file called `database.json`.
+>  3. Copy and paste [this code](https://pastebin.com/dzhwy7Mq) into `database.json`.
+>  4. Navigate to `/src/modules/` and create a file called `riotapikey.js`.
+>  5. Copy and paste [this code](https://pastebin.com/W245kQX4) into `riotapikey.js`.
+>  6. Navigate to the [Riot Games Developer Portal](https://developer.riotgames.com/), create a Riot Games Account, and apply for a temporary development API key.
+>  7. Once you have your API key, replace the `API_KEY_HERE` portion of `riotapikey.js`.
+>  8. Navigate back to the source directory.
+>  9. In one terminal window, run the function `npm start` to locally host the website.
+>  10. In a separate terminal window, navigate from the main directory to `/api` and run the following command: `json-server -p 5002 -w database.json`.
+>  11. Inside your web browser of choice, navigate to `localhost:3000`.
+>  12. You are now able to fully use ClimbTogether!
