@@ -1,0 +1,9 @@
+.response-details{
+  display: flex;
+  align-items: center;
+  align-content: space-between
+}
+
+.response-data{
+  margin-right: 12px;
+}

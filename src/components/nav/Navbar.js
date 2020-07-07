@@ -26,6 +26,7 @@ const NavbarHeader = () => {
   const logout = () => {
     sessionStorage.removeItem("authenticated")
     sessionStorage.removeItem("userId")
+    sessionStorage.removeItem("verified")
     window.location.reload()
   }
   
@@ -50,11 +51,6 @@ const NavbarHeader = () => {
             <NavItem>
               <NavLink href="/listings">
                 Listings
-              </NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink href="/responses">
-                Responses
               </NavLink>
             </NavItem>
           <UncontrolledDropdown nav inNavbar>

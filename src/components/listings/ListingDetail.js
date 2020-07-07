@@ -19,7 +19,7 @@ const ListingDetail = props => {
     getPost()
   }, [])
 
-  if(postObj.userId == currentUser){
+  if(postObj.userId === currentUser){
     return <ListDetailsCreator {...props} key={postObj.id}  postDetails={postObj}/>
   }
   else{

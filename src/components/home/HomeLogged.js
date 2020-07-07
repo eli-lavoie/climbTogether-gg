@@ -1,7 +1,8 @@
-import React, {useEffect, useState, useReducer} from 'react'
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Container } from 'reactstrap';
+import React, {useEffect, useState} from 'react'
+import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Container, ListGroup} from 'reactstrap';
 import LocalDataManager from '../../modules/LocalDataManager'
 import ListingCard from '../listings/ListingCard'
+import HomeUserResponses from './HomeUserResponses'
 import './Logged.css'
 
 const HomeLogged = props => {
@@ -12,6 +13,7 @@ const HomeLogged = props => {
   const [myResponses, setMyResponses] = useState([])
 
   const listOfGreetings = ["Hello there, General ", "Welcome to the League of ", "I'm a plat 2 smurf, my main is " ]
+  
   const verify = () => props.history.push("/verify")
   const toggle = () => setModal(!modal)
   
@@ -44,12 +46,11 @@ const HomeLogged = props => {
           setNewPosts(postArr)
         }
         else{
-
           newestPosts.push(postArr[numPosts-1])
           newestPosts.push(postArr[numPosts-2])
           newestPosts.push(postArr[numPosts-3])
           newestPosts.push(postArr[numPosts-4])
-          console.log(newestPosts)
+          setNewPosts(newestPosts)
         }
       })
   }
@@ -59,7 +60,8 @@ const HomeLogged = props => {
     const currentUserId = parseInt(currentUser)
     LocalDataManager.getQueryByOneParam("responses", "playerId", currentUserId)
     .then(responses => {
-      const postId = responses
+      const postList = responses
+      setMyResponses(postList)
     })
   }
   
@@ -77,6 +79,7 @@ const HomeLogged = props => {
     getUser()
     newGreeting()
     getNewPosts()
+    getResponseStatus()
   }, [])
   return(
     <>
@@ -110,14 +113,14 @@ const HomeLogged = props => {
             <div className="responses-header">
               <h3>Current Responses</h3>
             </div>
+            <div>
+              <ListGroup>
+                {myResponses.map(response => <HomeUserResponses {...props} data={response} key={response.id}/>)}
+              </ListGroup>
+            </div>
           </Container>
-
         </div>
-        <div className="bottom-row">
-
-        </div>
-        </Container>
-
+      </Container>
     </>
   )
 }
