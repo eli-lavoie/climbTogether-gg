@@ -1,0 +1,24 @@
+.login-page{
+  display:flex;
+  justify-content: center;
+}
+
+
+.login-card{
+  max-width:35%;
+  margin-top: 9em;
+}
+
+.parent .link{
+  color: #19297C
+}
+
+.link:hover{
+  color: #0496FF
+}
+
+.login-or-register{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
