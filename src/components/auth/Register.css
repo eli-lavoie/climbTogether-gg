@@ -1,0 +1,38 @@
+.register-page{
+  display: flex;
+  justify-content: center;
+}
+
+.register-card{
+  max-width:35%;
+  margin-top: 9em;
+}
+
+.register-or-login{
+  display: flex;
+  justify-content: space-around;
+}
+
+.register-btn{
+  background-color: #19297C;
+  color: #e6e6e6;
+  border: none
+}
+
+.register-btn:hover{
+  background-color: #e6e6e6;
+  color: #0496FF;
+  border: 1px solid #19297c 
+}
+
+.btn-to-login{
+  background-color: #0496FF;
+  color: #e6e6e6;
+  border: 0px
+}
+
+.btn-to-login:hover{
+  background-color: #e6e6e6;
+  color: #19297c;
+  border: 1px solid  #0496FF
+}

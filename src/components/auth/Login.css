@@ -1,0 +1,48 @@
+.login-page{
+  display:flex;
+  justify-content: center;
+}
+
+
+.login-card{
+  max-width:35%;
+  margin-top: 9em;
+}
+
+.parent .link{
+  color: #19297C
+}
+
+.link:hover{
+  color: #0496FF
+}
+
+.login-or-register{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.login-btn{
+  background-color: #19297C;
+  color: #e6e6e6;
+  border: none
+}
+
+.login-btn:hover{
+  background-color: #e6e6e6;
+  color: #0496FF;
+  border: 1px solid #19297c 
+}
+
+.btn-to-register{
+  background-color: #0496FF;
+  color: #e6e6e6;
+  border: 0px
+}
+
+.btn-to-register:hover{
+  background-color: #e6e6e6;
+  color: #19297c;
+  border: 1px solid  #0496FF
+}

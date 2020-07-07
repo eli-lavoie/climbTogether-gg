@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import LocalDataManager from '../../modules/LocalDataManager'
-import {Alert, Button, InputGroup, InputGroupText, InputGroupAddon, Input, Container} from 'reactstrap'
+import {Alert, Button, InputGroup, InputGroupText, InputGroupAddon, Input, Container, Card, CardImg, CardBody, CardFooter} from 'reactstrap'
+import './Register.css'
 
 const Register = props => {
   const [username, setUsername] = useState("")
@@ -66,22 +67,41 @@ const Register = props => {
       <Alert color={color} isOpen={visible} toggle={toggleAlert}>
         {error}
       </Alert>
-      <Container className="register-container">
-        <InputGroup className="register-input">
-          <InputGroupAddon addonType="prepend">
-            <InputGroupText>Username:</InputGroupText>
-          </InputGroupAddon>
-          <Input className="username-field" onChange={event => {setUsername(event.target.value)}} />
-          <InputGroupAddon addonType="prepend">
-            <InputGroupText>Password:</InputGroupText>
-          </InputGroupAddon>
-          <Input type="password" className="password-field" onChange={event => {setPassword(event.target.value)}}/>
-          <InputGroupAddon addonType="prepend">
-            <InputGroupText>Confirm Password:</InputGroupText>
-          </InputGroupAddon>
-          <Input type="password" className="password-verify-field" onChange={event => {setVerifyPass(event.target.value)}}/>
-          <Button className="register-btn" onClick={() =>{register(username, password, verifyPass)}}>Register</Button>
-        </InputGroup>
+
+      <Container className="register-page">
+        <Card className="register-card">
+          <CardImg top width="100%" src="https://i.ibb.co/L0TKDXS/Logo.png" />
+          <CardBody>
+            <InputGroup className="register-input">
+              <InputGroupAddon addonType="prepend">
+                <InputGroupText>Username:</InputGroupText>
+              </InputGroupAddon>
+              <Input className="username-field" onChange={event => {setUsername(event.target.value)}} />
+            </InputGroup>
+            <InputGroup>
+              <InputGroupAddon addonType="prepend">
+                <InputGroupText>Password:</InputGroupText>
+              </InputGroupAddon>
+              <Input type="password" className="password-field" onChange={event => {setPassword(event.target.value)}}/>
+            </InputGroup>
+            <InputGroup>
+              <InputGroupAddon addonType="prepend">
+                <InputGroupText>Confirm Password:</InputGroupText>
+              </InputGroupAddon>
+              <Input type="password" className="password-verify-field" onChange={event => {setVerifyPass(event.target.value)}}/>
+            </InputGroup>
+          </CardBody>
+          <CardFooter>
+            <div className="register-or-login">
+              <div className="register-btn-div">
+                <Button className="register-btn" onClick={() =>{register(username, password, verifyPass)}}>Register</Button>
+              </div>
+              <div className="link-to-login">
+                <Button className="btn-to-login" onClick={() =>{props.history.push("/login")}}>Login</Button>
+              </div>
+            </div>
+          </CardFooter>
+        </Card>
       </Container>
     </>
   )
