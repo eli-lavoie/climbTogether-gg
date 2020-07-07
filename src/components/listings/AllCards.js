@@ -14,8 +14,6 @@ const AllCards = props => {
     })
   }
 
-  const test = () => console.log(posts)
-
   useEffect(() =>{
     allListings()
   }, [])

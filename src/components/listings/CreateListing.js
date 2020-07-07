@@ -133,7 +133,7 @@ const CreateListing = props => {
       setAlert(true)
       return
     }
-    if(minRankId != 28){
+    if(minRankId !== 28){
       if (minRankId > maxRankId){
         setAlertMsg("The minimum rank cannot be higher than the maximum rank.")
         setAlertColor("warning")

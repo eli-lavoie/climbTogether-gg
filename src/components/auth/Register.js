@@ -52,6 +52,8 @@ const Register = props => {
         .then(result => {
           const newUserId = result[0].id
           sessionStorage.setItem("userId", newUserId)
+          sessionStorage.setItem("authenticated", true)
+          sessionStorage.setItem("verified", false)
         })
         props.history.push("/")
         window.location.reload()

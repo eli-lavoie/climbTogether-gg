@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react'
-import {Container, Button, Modal, ModalHeader, ModalBody, ModalFooter, ListGroup, Popover, PopoverHeader, PopoverBody} from 'reactstrap'
+import {Container, Button, ListGroup, Popover, PopoverHeader, PopoverBody} from 'reactstrap'
 import LocalDataManager from '../../modules/LocalDataManager' 
 import ResponsesList from './ResponsesList'
 import {withRouter} from 'react-router-dom'
@@ -7,8 +7,6 @@ import {withRouter} from 'react-router-dom'
 const ListDetailsCreator = props => {
   const post = props.postDetails
   const [postCreator, setPostCreator] = useState("") 
-  const test = "/listings/`${post.id}`/edit"
-  const [modalFooter, setModalFooter] = useState("")
   const [responses, setResponses] = useState([])
   const [deletePopover, openPopover] = useState(false)
   const [minRankName, setMinRankName] = useState("")
